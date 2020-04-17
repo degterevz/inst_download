@@ -24,10 +24,11 @@ def index():
 		base_url = 'https://www.instagram.com/p/'
 		
 		m = inp_url.split('/')
-		if m[-1] == '':
-			code = m[-2]
-		else:
-			code = m[-1]
+		for i in range(len(m)):
+			if m[i] == 'p':
+				code = m[i+1]
+				break
+
 
 		url_t = base_url + code + '/media/?size=t'
 		url_m = base_url + code + '/media/?size=m'
