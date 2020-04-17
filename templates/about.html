@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block link %}
+	<a href="/">Main</a>
+{% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			
+		  <h1>Интрукция по использованию сервиса:</h1>
+
+			<ol>
+				<li>
+					Вставте ссылку на пост в главное поле. Ссыллку можно указывать в трех форматах:
+		      <ul>
+		          <li>https://www.instagram.com/p/B_AfAKgARJ4/</li> 
+		          <li>www.instagram.com/p/B_AfAKgARJ4/</li> 
+		          <li>B_AfAKgARJ4</li> 
+		      </ul>
+        </li>					
+				<li>Если ссылка валидна, на странице появится загружаемая картинка.</li>
+				<li>Нажмите на картинку, она отроется в новой вкладке в полном размере.</li>
+				<li>Скачайте!</li>
+				<li>FROFIT!!!</li>
+			</ol>
+				
+		</div>
+	</div>     
+{% endblock %}

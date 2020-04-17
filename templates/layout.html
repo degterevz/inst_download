@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link type = "text/css" rel = "stylesheet" href = "static2/style.css" >
+    <title>{% block title %}{% endblock %} - InstGrub</title>
+    {% endblock %}
+  </head>
+
+  <body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					{% block link %}{% endblock %}
+				</div>
+			</div>
+		</nav>
+	
+		<div id="content">{% block content %}{% endblock %}</div>
+
+</html>

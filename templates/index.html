@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block link %}
+	<a href="about">About</a>
+{% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			
+		  <h1>Instagram photo downloader</h1>
+			<br>
+			
+		
+		  <form action="/" method="POST">				
+				<div class="form-row">
+					<div class="col-10">
+						<input type="text" class="form-control" name="PostInput" id="PostInput" aria-describedby="gradeHelp" placeholder="Вставте ссылку на пост">
+					</div>
+					<div class="col">
+						<button type="submit" class="btn btn-primary">Получить!</button>
+					</div>
+				</div>
+				{% if status == 'error' %}
+					<small style="color:red"> Ошибка. Укажите правильную ссылку	. </small>
+				{% endif %} 				
+		  </form>
+		</div>
+	</div>
+
+	{% if status == 'success' %}
+		<br>
+		<center>
+			<a href={{img_big}} target="_blank">
+				<img src={{img_small}} alt="тык"/>
+			</a>
+		</center>
+		<center>
+			<small>нажмите на изображение для загрузки</small>
+		</center>
+	{% endif %}      
+{% endblock %}
